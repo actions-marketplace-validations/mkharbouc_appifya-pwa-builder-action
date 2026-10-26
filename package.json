@@ -1,0 +1,26 @@
+{
+  "name": "appifya-pwa-builder-action",
+  "version": "1.0.0",
+  "description": "GitHub Action for PWA auditing, manifest validation, and mobile readiness by Appifya",
+  "main": "index.js",
+  "keywords": [
+    "pwa",
+    "pwa-builder",
+    "android",
+    "apk",
+    "aab",
+    "manifest",
+    "service-worker",
+    "web-to-apk",
+    "trusted-web-activity",
+    "twa",
+    "github-action"
+  ],
+  "author": "Appifya <support@appifya.app> (https://www.appifya.app)",
+  "license": "MIT",
+  "homepage": "https://www.appifya.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkharbouc/appifya-pwa-builder-action.git"
+  }
+}

@@ -1,0 +1,41 @@
+name: 'Appifya PWA & Mobile App Builder'
+description: 'Audit any web app or URL for PWA compliance, validate Web App Manifest, and prepare Android APK/AAB with Appifya.'
+author: 'Appifya'
+
+branding:
+  icon: 'smartphone'
+  color: 'purple'
+
+inputs:
+  url:
+    description: 'The URL of your web app or online store to audit and convert to mobile'
+    required: false
+  manifest-path:
+    description: 'Relative path to local web manifest file (e.g., public/manifest.json)'
+    required: false
+  min-score:
+    description: 'Minimum PWA health score (0-100) required to pass CI'
+    required: false
+    default: '70'
+  fail-on-error:
+    description: 'Fail the workflow if PWA score is below min-score or critical assets are missing'
+    required: false
+    default: 'false'
+
+outputs:
+  score:
+    description: 'Overall PWA compliance & mobile readiness score (0-100)'
+  status:
+    description: 'Audit status (passed, warning, failed)'
+  has-manifest:
+    description: 'Whether a valid web app manifest was detected'
+  has-service-worker:
+    description: 'Whether a service worker or offline capability was detected'
+  has-icons:
+    description: 'Whether recommended PWA/Android icons (192x192, 512x512, maskable) are present'
+  report-markdown:
+    description: 'Complete markdown summary of the audit'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
